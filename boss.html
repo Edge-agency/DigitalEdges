@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalEdge Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="https://kit.fontawesome.com/2dc419a9fe.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lugrasimo&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script src="https://kit.fontawesome.com/2dc419a9fe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><span id="im">impact</span><span id="wave">Wave</span></a>
+
+        </div>
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a> </li>
+                <li>
+                    <a href="#" onclick="window.location.href='index.html#about'">About Us</a> </a>
+                </li>
+                <li>
+                    <a href="#" onclick="window.location.href='index.html#services'" style="color: var(--main-color);">services</a> </a>
+                    <li>
+                        <a href="#" onclick="window.location.href='index.html#contact'">contact us</a> </a>
+
+            </ul>
+        </div>
+        <div class="join_button">
+            <button id="join" onclick="redirectToWhatsApp()">Contact via WhatsApp</button>
+            <button id="menu"><i class=""></i></button>
+            <button class="bx bx-menu" id="menu"></button>
+        </div>
+    </header>
+
+    <div class="titles">
+        <h1>Ready to get started ?</h1>
+        <h3>Find the subscription that suits you</h3>
+    </div>
+    <section class="packs">
+        <div class="pack" onclick="redirectToEmail('Elite Reviews')">
+            <div class="header">
+                <div class="tits">
+                    <h5>Elite Reviews</h5>
+                    <h1>100 review</h1>
+                </div>
+                <img src="   https://cdn-icons-png.flaticon.com/512/10024/10024271.png " alt="">
+            </div>
+            <div class="in">
+                <ul class="infos">
+                    <li> <span>Cost</span>: $1.5 per review</li>
+                    <li> <span>Quantity</span>: 100 reviews</li>
+                    <li> <span>Ratings</span>: 5-star option</li>
+                    <li> <span>Comments</span>: Random or custom</li>
+                    <li> <span>Total Cost</span>: $150</li>
+                </ul>
+                <button id="get">Choose this offer</button>
+            </div>
+        </div>
+        <div class="pack" onclick="redirectToEmail('Prime Offer')">
+            <div class="header">
+                <div class="tits">
+                    <h5>Prime Offer</h5>
+                    <h1>200 review</h1>
+                </div>
+                <img src="   https://cdn-icons-png.flaticon.com/512/11077/11077443.png " alt="">
+            </div>
+            <div class="in">
+                <ul class="infos">
+                    <li> <span>Cost</span>: $1 per review</li>
+                    <li> <span>Quantity</span>: 200 reviews</li>
+                    <li> <span>Ratings</span>: 5-star option</li>
+                    <li> <span>Comments</span>: Random or custom</li>
+                    <li> <span>Total Cost</span>: $100</li>
+                </ul>
+                <button id="get">Choose this offer</button>
+            </div>
+        </div>
+        <div class="pack" onclick="redirectToEmail('Premium Choice')">
+            <div class="header">
+                <div class="tits">
+                    <h5>Premium Choice</h5>
+                    <h1>Custom review</h1>
+                </div>
+                <img src="   https://cdn-icons-png.flaticon.com/512/11077/11077426.png " alt="">
+            </div>
+            <div class="in">
+                <ul class="infos">
+                    <li> <span>Cost</span>: $0.9 per review</li>
+                    <li> <span>Quantity</span>: --</li>
+                    <li> <span>Ratings</span>: 5-star option</li>
+                    <li> <span>Comments</span>: Random or custom</li>
+                    <li> <span>Total Cost</span>: --</li>
+                </ul>
+                <button id="get">Choose this offer</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+    <script>
+        function redirectToEmail(packName) {
+            const subject = encodeURIComponent(`Interested in the "${packName}" pack`);
+            const body = encodeURIComponent(`Hello, I'm interested in the "${packName}" pack. Can you provide more information?`);
+            const email = 'redaelklie@gmail.com';
+            const mailtoUrl = `mailto:${email}?subject=${subject}&body=${body}`;
+            window.location.href = mailtoUrl;
+        }
+
+        function redirectToWhatsApp() {
+            const message = "Hello, I have a query. Can you assist me?";
+            const encodedMessage = encodeURIComponent(message);
+            const phoneNumber = "+212652224291";
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.location.href = whatsappUrl;
+        }
+    </script>
+</body>
+
+</html>
