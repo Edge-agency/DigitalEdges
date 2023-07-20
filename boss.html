@@ -129,7 +129,7 @@
         function redirectToWhatsApp() {
             const message = "Hello, I have a query. Can you assist me?";
             const encodedMessage = encodeURIComponent(message);
-            const phoneNumber = "+212708348739";
+            const phoneNumber = "212708348739";
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
             window.location.href = whatsappUrl;
         }
